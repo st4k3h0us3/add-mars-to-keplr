@@ -3,10 +3,37 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
+    <style>
+      body {
+        margin: 0;
+        padding: 1rem 2rem;
+      }
+      .max-width-400 {
+        max-width: 400;
+      }
+    </style>
     <title>add mars to keplr</title>
   </head>
   <body>
-    <button id="addBtn">add Mars chain to Keplr wallet</button>
+    <p class="max-width-400">
+      Click the below button if you are a new user to Mars Hub. This option uses
+      coin type 118 to derive Mars address from your seed phrase, which is
+      consistent with what most Cosmos chains use.
+    </p>
+    <button id="addBtn">Add Mars chain to Keplr wallet</button>
+    <p class="max-width-400">
+      Click the below button if you wish to derive your address using the
+      non-standard coin type 330, which is used by Terra. <i>Selecting this option
+      is only recommended if you are migrating from Terra Classic, and may
+      result in poor composability with other Cosmos chains.</i>
+    </p>
+    <button id="addNonStandardBtn">
+      Add Mars chain to Keplr wallet (nonstandard - coin type 330)
+    </button>
+    <p class="max-width-400">
+      If you wish to switch from non-standard to standard, it is necessary to
+      first remove the non-standard chain from Keplr.
+    </p>
     <script type="module" src="./index.ts"></script>
   </body>
 </html>
